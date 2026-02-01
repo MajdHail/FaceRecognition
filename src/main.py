@@ -3,7 +3,6 @@ import time
 import mediapipe as mp
 import numpy as np
 
-# MediaPipe FaceMesh setup
 mp_face_mesh = mp.solutions.face_mesh
 
 face_mesh = mp_face_mesh.FaceMesh(
@@ -14,16 +13,14 @@ face_mesh = mp_face_mesh.FaceMesh(
     min_tracking_confidence=0.5
 )
 
-# Webcam setup
-cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+webcam = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
 time.sleep(1)
 
-if not cap.isOpened():
+if not webcam.isOpened():
     raise RuntimeError("Could not open webcam")
 
-# Main loop
 while True:
-    ret, frame = cap.read()
+    ret, frame = webcam.read()
     if not ret:
         break
 
@@ -67,11 +64,11 @@ while True:
         3
     )
 
-    cv2.imshow("Face Direction", frame)
+    cv2.imshow("Face Detector", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cap.release()
+webcam.release()
 cv2.destroyAllWindows()
 
