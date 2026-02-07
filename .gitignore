@@ -1,19 +1,38 @@
+# Face Recognition Database
+face_database.pkl
+
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.pyc
-
-# Virtual environment
+*$py.class
+*.so
+.Python
+env/
 venv/
 ENV/
-env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# macOS
-.DS_Store
-
-# VSCode/PyCharm
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
+# OS
+.DS_Store
+Thumbs.db
