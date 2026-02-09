@@ -4,7 +4,6 @@ import mediapipe as mp
 import numpy as np
 import pickle
 import os
-from pathlib import Path
 
 mp_face_mesh = mp.solutions.face_mesh
 
