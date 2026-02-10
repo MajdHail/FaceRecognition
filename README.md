@@ -79,16 +79,12 @@ Registered faces are stored in `face_database.pkl` in the same directory as the 
 **Webcam not working:**
 - Make sure your webcam is connected and not being used by another application
 - On macOS, grant camera permissions when prompted
-- Try changing `cv2.CAP_AVFOUNDATION` to `0` in the code if you're on Windows/Linux
+- Try changing `cv2.CAP_AVFOUNDATION` to `0` (or `1` or `2` if you have multiple Webcams) in the code if you're on Windows/Linux
 
 **Recognition not working well:**
 - Ensure good lighting when registering faces
 - Stand at a similar distance during registration and recognition
 - Re-register with better quality captures if needed
-
-**"Could not open webcam" error:**
-- Check that your webcam is connected
-- Try changing the camera index from `0` to `1` or `2` if you have multiple cameras
 
 ## License
 
